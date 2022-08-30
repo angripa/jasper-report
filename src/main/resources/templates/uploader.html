@@ -1,0 +1,31 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title> Convert File </title>
+</head>
+<body>
+<form action="http://localhost:8080/upload" method="POST" enctype="multipart/form-data">
+  <input id="fileupload"  type="file" name="file" /><br><br>
+  <button id="upload-button"> Upload </button>
+</form>
+
+
+<!-- Ajax JavaScript File Upload to Spring Boot Logic -->
+<script>
+// async function uploadFile() {
+//   let formData = new FormData();
+//   formData.append("file", fileupload.files[0]);
+//   let response = await fetch('http://localhost:8080/upload', {
+//     method: "POST",
+//     body: formData
+//   });
+//   console.log(response)
+//   if (response.status == 200) {
+//     alert("File successfully uploaded.");
+//   }
+// }
+</script>
+
+
+
+</body>
+</html>
