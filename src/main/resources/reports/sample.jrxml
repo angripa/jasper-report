@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Report" pageWidth="681" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="634" leftMargin="20" rightMargin="25" topMargin="20" bottomMargin="20" uuid="81009a31-11e5-494b-9ef1-14c9122bcc33">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Report" pageWidth="680" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="627" leftMargin="20" rightMargin="33" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="81009a31-11e5-494b-9ef1-14c9122bcc33">
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
@@ -31,7 +31,8 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="298">
+		<band height="297">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField evaluationTime="Master">
 				<reportElement x="429" y="29" width="191" height="17" uuid="f4d4679e-a501-424c-b941-44993938053c"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
@@ -47,355 +48,308 @@
 				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
 			<textField>
-				<reportElement x="433" y="11" width="193" height="19" uuid="20a54be3-41ed-435c-96b3-55a73b993ee1"/>
+				<reportElement x="432" y="11" width="193" height="19" uuid="20a54be3-41ed-435c-96b3-55a73b993ee1"/>
 				<textElement textAlignment="Right">
 					<font isBold="true" pdfFontName="Tahoma-Bold" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["LAPORAN TRANSAKSI FINANSIAL"]]></textFieldExpression>
 			</textField>
 			<frame>
-				<reportElement x="11" y="109" width="235" height="91" isRemoveLineWhenBlank="true" uuid="5eaf5293-ab9b-4fad-a09b-db67a6a5a10e">
+				<reportElement style="reportStyle" x="10" y="66" width="616" height="224" isRemoveLineWhenBlank="true" uuid="9c6c79ba-29bf-4af1-bdd1-c4baef72aebd">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
 				</reportElement>
-				<box>
-					<pen lineWidth="0.5" lineColor="#D3D3D3"/>
-					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#D3D3D3"/>
-				</box>
-				<staticText>
-					<reportElement x="8" y="5" width="101" height="15" isRemoveLineWhenBlank="true" uuid="856c9a65-b263-453b-b23c-434a1236ea67">
-						<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
+				<frame>
+					<reportElement x="1" y="43" width="235" height="91" isRemoveLineWhenBlank="true" uuid="849ae2d5-5cc8-41ae-99e0-25c3e8a5163d">
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					</reportElement>
-					<textElement>
-						<font size="10"/>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+						<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#D3D3D3"/>
+					</box>
+					<staticText>
+						<reportElement x="8" y="5" width="101" height="15" isRemoveLineWhenBlank="true" uuid="a648cb0d-c00c-4eca-9d96-9b787842f9b7"/>
+						<textElement>
+							<font size="10"/>
+						</textElement>
+						<text><![CDATA[Kepada Yth.]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="8" y="21" width="164" height="15" isRemoveLineWhenBlank="true" uuid="ecb274f2-ee45-42e2-9fa5-007755b16404"/>
+						<textElement>
+							<font size="10" isBold="true" pdfFontName="Tahoma-Bold" isPdfEmbedded="true"/>
+						</textElement>
+						<text><![CDATA[MULTIDAYA TEKNOLOGI]]></text>
+					</staticText>
+					<staticText>
+						<reportElement x="8" y="49" width="225" height="36" isRemoveLineWhenBlank="true" uuid="c4f4b197-d52f-4b10-a22d-073ab26b4b13">
+							<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						</reportElement>
+						<textElement>
+							<font size="10"/>
+						</textElement>
+						<text><![CDATA[JL JEND SUDIRMAN NO 594 RT 005 RW 004,Rt.005/004,BANDUNG KOT. ANDIR BANDUNG KOT.]]></text>
+					</staticText>
+				</frame>
+				<textField>
+					<reportElement x="3" y="11" width="206" height="20" isRemoveLineWhenBlank="true" uuid="039d4f40-fb80-4977-b655-b4dfca999e8c"/>
+					<textElement textAlignment="Left">
+						<font size="12" isBold="true" pdfFontName="Tahoma-Bold" isPdfEmbedded="true"/>
 					</textElement>
-					<text><![CDATA[Kepada Yth.]]></text>
-				</staticText>
+					<textFieldExpression><![CDATA["LAPORAN TRANSAKSI"]]></textFieldExpression>
+				</textField>
 				<staticText>
-					<reportElement x="8" y="21" width="164" height="15" isRemoveLineWhenBlank="true" uuid="f8911d34-240b-47d5-aa01-17ce8553ad72">
-						<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-					</reportElement>
-					<textElement>
-						<font size="10" isBold="true" pdfFontName="Tahoma-Bold" isPdfEmbedded="true"/>
-					</textElement>
-					<text><![CDATA[MULTIDAYA TEKNOLOGI]]></text>
-				</staticText>
-				<staticText>
-					<reportElement x="8" y="49" width="225" height="36" isRemoveLineWhenBlank="true" uuid="42437cda-03c9-450f-9201-a94cb63ac94e">
+					<reportElement x="2" y="153" width="74" height="15" isRemoveLineWhenBlank="true" uuid="940bfc1f-4442-427f-b1b8-e984f130850d">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
-						<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
 					</reportElement>
+					<box leftPadding="2"/>
 					<textElement>
-						<font size="10"/>
+						<font size="8"/>
 					</textElement>
-					<text><![CDATA[JL JEND SUDIRMAN NO 594 RT 005 RW 004,Rt.005/004,BANDUNG KOT. ANDIR BANDUNG KOT.]]></text>
+					<text><![CDATA[No. Rekening]]></text>
 				</staticText>
+				<staticText>
+					<reportElement x="2" y="171" width="74" height="15" isRemoveLineWhenBlank="true" uuid="d40937df-7b11-419e-bba4-08e9c360a568"/>
+					<box leftPadding="2"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Nama Produk]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="2" y="189" width="74" height="15" isRemoveLineWhenBlank="true" uuid="ef3c05a2-f56d-4074-9eed-071cb9f47645"/>
+					<box leftPadding="2"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Valuta]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="79" y="189" width="17" height="15" isRemoveLineWhenBlank="true" uuid="c373ac71-b2b0-4a49-9f1c-b5657965ee41"/>
+					<textElement textAlignment="Center">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="79" y="171" width="17" height="15" isRemoveLineWhenBlank="true" uuid="b3122e01-2b04-4ac4-80e9-72baa98755fc"/>
+					<textElement textAlignment="Center">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="79" y="153" width="17" height="15" isRemoveLineWhenBlank="true" uuid="1404bd65-f4c1-445b-8877-88c9c170df0e"/>
+					<textElement textAlignment="Center">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="96" y="171" width="101" height="15" isRemoveLineWhenBlank="true" uuid="36b6a5db-7f8e-49af-823d-211d41d7619d"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[BritAma Bisnis]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="300" y="171" width="70" height="15" isRemoveLineWhenBlank="true" uuid="a298dffc-ce61-4464-990f-081264d65784"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Alamat Unit Kerja]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="378" y="171" width="10" height="15" isRemoveLineWhenBlank="true" uuid="007e5c29-318d-40bb-99aa-3a7835864f8f"/>
+					<textElement textAlignment="Center">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="400" y="171" width="136" height="15" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="50b13263-519b-4369-bb09-b0901c4a47dd">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19599bff-2539-4d8b-9272-8e605e8a6432"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Jl. Dokter Setiabudhi No. 170 F-G"]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="400" y="153" width="111" height="15" isRemoveLineWhenBlank="true" uuid="cf190234-002d-4239-8a9e-000ac140506e"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[KC Bandung Setiabudi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="378" y="153" width="10" height="15" isRemoveLineWhenBlank="true" uuid="eab16224-8577-43ef-8824-f93b025351f4"/>
+					<textElement textAlignment="Center">
+						<font size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="300" y="153" width="70" height="15" isRemoveLineWhenBlank="true" uuid="1ec23b45-ee40-4c0f-b14c-c73c7e13ad43"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Unit Kerja]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="300" y="93" width="70" height="15" isRemoveLineWhenBlank="true" uuid="a209dbbe-a0cb-4e92-8d1c-9bb49194e868"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Halaman]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="377" y="93" width="10" height="15" isRemoveLineWhenBlank="true" uuid="ee6bee4f-13bf-4e71-9400-248e5bb61cee"/>
+					<textElement textAlignment="Center">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="399" y="93" width="111" height="15" isRemoveLineWhenBlank="true" uuid="1838f53a-076d-4887-8398-7f389838c63d"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[1]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="377" y="65" width="10" height="15" isRemoveLineWhenBlank="true" uuid="f9a48f87-e574-49b9-aadf-80e7a8cb801f"/>
+					<textElement textAlignment="Center">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="300" y="65" width="70" height="15" isRemoveLineWhenBlank="true" uuid="b0b07220-dac8-4a5b-af96-f5fbd071983d"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Periode Transaksi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="300" y="46" width="70" height="15" isRemoveLineWhenBlank="true" uuid="fe18fec1-231b-44e3-b3ed-b434a355f957"/>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[Tanggal Laporan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="377" y="46" width="10" height="15" isRemoveLineWhenBlank="true" uuid="41701f0c-d604-40af-86f1-e7ed1a1dfc9d"/>
+					<textElement textAlignment="Center">
+						<font size="8"/>
+					</textElement>
+					<text><![CDATA[:]]></text>
+				</staticText>
+				<frame>
+					<reportElement x="2" y="0" width="612" height="2" uuid="92af68fc-84a3-4063-8bef-e38831137074">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+				</frame>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00">
+					<reportElement x="96" y="153" width="90" height="15" isPrintWhenDetailOverflows="true" uuid="1229deaa-b816-4d9f-8588-578156a9958b">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88448a52-92eb-4062-a591-b6e0af20971f"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{accountNo}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00">
+					<reportElement x="96" y="189" width="90" height="15" isPrintWhenDetailOverflows="true" uuid="cc923842-4213-4bf5-ba34-2c73de93019c">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88448a52-92eb-4062-a591-b6e0af20971f"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{currency}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00">
+					<reportElement x="399" y="46" width="171" height="15" isPrintWhenDetailOverflows="true" uuid="88b1f76c-2c56-4b46-8486-f53ec5617530">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88448a52-92eb-4062-a591-b6e0af20971f"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{reportDate}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="#,##0.00">
+					<reportElement x="399" y="65" width="171" height="15" isPrintWhenDetailOverflows="true" uuid="d710de6b-fe16-4361-9284-ec4360921f53">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88448a52-92eb-4062-a591-b6e0af20971f"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{trxPeriod}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="400" y="189" width="136" height="15" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="52dad784-9712-4cc7-ae37-0c4ce45e2264">
+						<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19599bff-2539-4d8b-9272-8e605e8a6432"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Bandung"]]></textFieldExpression>
+				</textField>
 			</frame>
-			<textField>
-				<reportElement x="13" y="77" width="206" height="20" isRemoveLineWhenBlank="true" uuid="531dd971-cd3b-4dc5-a411-3549216eaecd">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Left">
-					<font size="12" isBold="true" pdfFontName="Tahoma-Bold" isPdfEmbedded="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA["LAPORAN TRANSAKSI"]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="12" y="219" width="74" height="15" isRemoveLineWhenBlank="true" uuid="c8a3f176-87cc-464c-85b7-f4554de94df2">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.x" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<box leftPadding="2"/>
-				<textElement>
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[No. Rekening]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="12" y="237" width="74" height="15" isRemoveLineWhenBlank="true" uuid="f65d70fb-de17-4213-8dee-fca96ed023d2">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<box leftPadding="2"/>
-				<textElement>
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[Nama Produk]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="12" y="255" width="74" height="15" isRemoveLineWhenBlank="true" uuid="d22afec8-0b14-4668-b6d9-f0c768378eb3">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<box leftPadding="2"/>
-				<textElement>
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[Valuta]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="89" y="255" width="17" height="15" isRemoveLineWhenBlank="true" uuid="2baf9870-8a68-4cd3-b7f9-fe57d3ad8294">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="89" y="237" width="17" height="15" isRemoveLineWhenBlank="true" uuid="31597c5f-c9b1-4d01-a0e4-e0f4b1b4aade">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="89" y="219" width="17" height="15" isRemoveLineWhenBlank="true" uuid="06feeb3a-bd1c-4e95-a879-b88f12cda443">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="106" y="237" width="101" height="15" isRemoveLineWhenBlank="true" uuid="e82707f8-d97c-48ee-951c-137067d31042">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<textElement>
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[BritAma Bisnis]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="310" y="237" width="70" height="15" isRemoveLineWhenBlank="true" uuid="6ebcc6db-e793-4e25-a2ea-5fc7feb1ae5e">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<textElement>
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[Alamat Unit Kerja]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="388" y="237" width="10" height="15" isRemoveLineWhenBlank="true" uuid="850c6c87-1502-4c19-b959-c6607a18b239">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
-				</textElement>
-				<text><![CDATA[:]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="410" y="237" width="136" height="15" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="4513c22d-05e6-4fb0-81b2-ad6a1c3e428b">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19599bff-2539-4d8b-9272-8e605e8a6432"/>
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement>
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA["Jl. Dokter Setiabudhi No. 170 F-G"]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement x="410" y="219" width="111" height="15" isRemoveLineWhenBlank="true" uuid="8fb6b355-9f85-4452-9792-d4e6464b8976">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<textElement>
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[KC Bandung Setiabudi]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="388" y="219" width="10" height="15" isRemoveLineWhenBlank="true" uuid="fa301a4b-36e9-4bd3-bb54-657844a61824">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center">
-					<font size="8" isBold="true"/>
-				</textElement>
-				<text><![CDATA[:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="310" y="219" width="70" height="15" isRemoveLineWhenBlank="true" uuid="7a1fe7ee-24f8-4103-aab8-86fbecacca13">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<textElement>
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[Unit Kerja]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="310" y="159" width="70" height="15" isRemoveLineWhenBlank="true" uuid="436c81a1-a7d3-4e59-bafa-fd8b47283543">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<textElement>
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[Halaman]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="387" y="159" width="10" height="15" isRemoveLineWhenBlank="true" uuid="dfefbbfd-ba9d-46c1-a387-1c0d1f1c1b20">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="409" y="159" width="111" height="15" isRemoveLineWhenBlank="true" uuid="68da6242-4bf4-4d85-8eb0-9f891b6bd7fe">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<textElement>
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[1]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="387" y="131" width="10" height="15" isRemoveLineWhenBlank="true" uuid="5c2b072f-305e-4f43-922a-68fdec31c14e">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[:]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="310" y="131" width="70" height="15" isRemoveLineWhenBlank="true" uuid="25f5b043-fbda-49f0-81b8-45e48d12c759">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<textElement>
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[Periode Transaksi]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="310" y="112" width="70" height="15" isRemoveLineWhenBlank="true" uuid="5934eba4-e67d-4506-b9a5-a7bd732beeac">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<textElement>
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[Tanggal Laporan]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="387" y="112" width="10" height="15" isRemoveLineWhenBlank="true" uuid="b223d382-ca82-4459-8efa-a8bfee282887">
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center">
-					<font size="8"/>
-				</textElement>
-				<text><![CDATA[:]]></text>
-			</staticText>
-			<frame>
-				<reportElement x="11" y="66" width="612" height="2" isRemoveLineWhenBlank="true" uuid="d941b7ae-0d9f-49c6-b7cc-814205bed8ab">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<box>
-					<topPen lineColor="#D3D3D3"/>
-					<leftPen lineColor="#D3D3D3"/>
-					<bottomPen lineWidth="0.25" lineColor="#D3D3D3"/>
-					<rightPen lineColor="#D3D3D3"/>
-				</box>
-			</frame>
-			<textField isStretchWithOverflow="true" pattern="#,##0.00">
-				<reportElement x="106" y="219" width="90" height="15" isPrintWhenDetailOverflows="true" uuid="7c2a6009-289c-476a-9d95-ba78c1d5975d">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88448a52-92eb-4062-a591-b6e0af20971f"/>
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Left" verticalAlignment="Top">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{accountNo}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" pattern="#,##0.00">
-				<reportElement x="106" y="255" width="90" height="15" isPrintWhenDetailOverflows="true" uuid="a032465d-256d-4b12-a010-41486c393dd1">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88448a52-92eb-4062-a591-b6e0af20971f"/>
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Left" verticalAlignment="Top">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{currency}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" pattern="#,##0.00">
-				<reportElement x="409" y="112" width="171" height="15" isPrintWhenDetailOverflows="true" uuid="7e1f24b1-add6-44fe-a87b-f7c6ec2979c8">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88448a52-92eb-4062-a591-b6e0af20971f"/>
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Left" verticalAlignment="Top">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{reportDate}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true" pattern="#,##0.00">
-				<reportElement x="409" y="131" width="171" height="15" isPrintWhenDetailOverflows="true" uuid="0a2c1e31-1973-4dc9-a321-5b454b1aa02c">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88448a52-92eb-4062-a591-b6e0af20971f"/>
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement textAlignment="Left" verticalAlignment="Top">
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{trxPeriod}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="410" y="255" width="136" height="15" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="1b0ad3af-275b-4102-95d5-dd6056fa7237">
-					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19599bff-2539-4d8b-9272-8e605e8a6432"/>
-					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
-				</reportElement>
-				<box>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-				</box>
-				<textElement>
-					<font size="8"/>
-				</textElement>
-				<textFieldExpression><![CDATA["Bandung"]]></textFieldExpression>
-			</textField>
 		</band>
 	</pageHeader>
 	<columnHeader>
 		<band height="27" splitType="Stretch">
 			<staticText>
-				<reportElement mode="Opaque" x="12" y="0" width="73" height="27" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#ADD8E6" uuid="a51d6f53-1dee-446c-9280-379a48fe59fc">
+				<reportElement mode="Opaque" x="12" y="0" width="74" height="27" isRemoveLineWhenBlank="true" forecolor="#000000" backcolor="#ADD8E6" uuid="a51d6f53-1dee-446c-9280-379a48fe59fc">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0f7074bb-e6ea-4350-9425-56f9e3a6f312"/>
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 				</reportElement>
@@ -411,7 +365,7 @@
 				<text><![CDATA[Tanggal Transaksi]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="85" y="0" width="186" height="27" isRemoveLineWhenBlank="true" backcolor="#ADD8E6" uuid="e6381015-0c93-4f72-a773-c36552a60774">
+				<reportElement mode="Opaque" x="86" y="0" width="185" height="27" isRemoveLineWhenBlank="true" backcolor="#ADD8E6" uuid="e6381015-0c93-4f72-a773-c36552a60774">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5c82bbbb-42cb-4145-96c7-9d48eeb11b04"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
@@ -442,8 +396,9 @@
 				<text><![CDATA[Teller]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="318" y="0" width="101" height="27" isRemoveLineWhenBlank="true" backcolor="#ADD8E6" uuid="b469685d-446a-4ca1-a1e7-6f902c7819ae">
+				<reportElement mode="Opaque" x="318" y="0" width="108" height="27" isRemoveLineWhenBlank="true" backcolor="#ADD8E6" uuid="b469685d-446a-4ca1-a1e7-6f902c7819ae">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88448a52-92eb-4062-a591-b6e0af20971f"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<box rightPadding="2">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -457,7 +412,7 @@
 				<text><![CDATA[Debet]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="419" y="0" width="101" height="27" isRemoveLineWhenBlank="true" backcolor="#ADD8E6" uuid="01280563-cdba-45d0-84a8-e66035e67003">
+				<reportElement mode="Opaque" x="426" y="0" width="93" height="27" isRemoveLineWhenBlank="true" backcolor="#ADD8E6" uuid="01280563-cdba-45d0-84a8-e66035e67003">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="14ba9b8c-bfe1-4821-823d-0b1362a9cecf"/>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
@@ -473,8 +428,9 @@
 				<text><![CDATA[Kredit]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="520" y="0" width="100" height="27" isRemoveLineWhenBlank="true" backcolor="#ADD8E6" uuid="a5f20289-d9ee-42e6-b6e7-d99397a68fe2">
+				<reportElement mode="Opaque" x="519" y="0" width="98" height="27" isRemoveLineWhenBlank="true" backcolor="#ADD8E6" uuid="a5f20289-d9ee-42e6-b6e7-d99397a68fe2">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="19599bff-2539-4d8b-9272-8e605e8a6432"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<box rightPadding="2">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -490,105 +446,121 @@
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="20" splitType="Stretch">
+		<band height="19">
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="12" y="1" width="73" height="19" isPrintWhenDetailOverflows="true" uuid="50086445-28ca-4584-a555-af137b7cb66d">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="12" y="0" width="74" height="19" isPrintWhenDetailOverflows="true" uuid="50086445-28ca-4584-a555-af137b7cb66d">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0f7074bb-e6ea-4350-9425-56f9e3a6f312"/>
 					<property name="com.jaspersoft.studio.unit.leftIndent" value="pixel"/>
 				</reportElement>
-				<box topPadding="4" leftPadding="2" bottomPadding="5" rightPadding="2">
+				<box topPadding="6" leftPadding="4" bottomPadding="5" rightPadding="4">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#D3D3D3"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font size="8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7.5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="85" y="1" width="186" height="19" isPrintWhenDetailOverflows="true" uuid="522d9e56-1c60-49f7-b259-62e6eb3f4551">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="86" y="0" width="185" height="19" isPrintWhenDetailOverflows="true" uuid="522d9e56-1c60-49f7-b259-62e6eb3f4551">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5c82bbbb-42cb-4145-96c7-9d48eeb11b04"/>
 				</reportElement>
-				<box topPadding="4" leftPadding="2" bottomPadding="5" rightPadding="2">
+				<box topPadding="6" leftPadding="4" bottomPadding="5" rightPadding="4">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font size="8"/>
+					<font size="7.5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{detailTrx}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="271" y="1" width="47" height="19" isPrintWhenDetailOverflows="true" uuid="3cd56c4b-9462-4d4f-8bc5-56e89cacb1c3">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="271" y="0" width="47" height="19" isPrintWhenDetailOverflows="true" uuid="3cd56c4b-9462-4d4f-8bc5-56e89cacb1c3">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c909bed0-2df7-49db-96dc-de22500c0504"/>
 				</reportElement>
-				<box topPadding="4" leftPadding="2" bottomPadding="5" rightPadding="2">
+				<box topPadding="6" leftPadding="4" bottomPadding="5" rightPadding="4">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font size="8"/>
+					<font size="7.5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{teller}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="#,##0.00">
-				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="318" y="1" width="101" height="19" isPrintWhenDetailOverflows="true" uuid="b8d56258-3905-4ec7-9791-8233f24baf12">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="318" y="0" width="108" height="19" isPrintWhenDetailOverflows="true" uuid="b8d56258-3905-4ec7-9791-8233f24baf12">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88448a52-92eb-4062-a591-b6e0af20971f"/>
 				</reportElement>
-				<box topPadding="4" leftPadding="2" bottomPadding="5" rightPadding="2">
+				<box topPadding="6" leftPadding="4" bottomPadding="5" rightPadding="4">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font size="8"/>
+					<font size="7.5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{debit}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="#,##0.00">
-				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="419" y="1" width="101" height="19" isPrintWhenDetailOverflows="true" uuid="bd98a06a-2f2f-4063-9f4c-8aee5f211600">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="426" y="0" width="93" height="19" isPrintWhenDetailOverflows="true" uuid="bd98a06a-2f2f-4063-9f4c-8aee5f211600">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="14ba9b8c-bfe1-4821-823d-0b1362a9cecf"/>
 				</reportElement>
-				<box topPadding="4" leftPadding="2" bottomPadding="5" rightPadding="2">
+				<box topPadding="6" leftPadding="4" bottomPadding="5" rightPadding="4">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font size="8"/>
+					<font size="7.5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{credit}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="#,##0.00">
-				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="520" y="1" width="100" height="19" isPrintWhenDetailOverflows="true" uuid="bd98a06a-2f2f-4063-9f4c-8aee5f211600">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="519" y="0" width="97" height="19" isPrintWhenDetailOverflows="true" uuid="bd98a06a-2f2f-4063-9f4c-8aee5f211600">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="14ba9b8c-bfe1-4821-823d-0b1362a9cecf"/>
 				</reportElement>
-				<box topPadding="4" leftPadding="2" bottomPadding="5" rightPadding="2">
+				<box topPadding="6" leftPadding="4" bottomPadding="5" rightPadding="4">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font size="8"/>
+					<font size="7.5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{balance}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
+	<columnFooter>
+		<band height="1">
+			<frame>
+				<reportElement x="11" y="0" width="605" height="1" uuid="de3ece39-d584-49da-92fb-3947921e7ee7">
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#808080"/>
+					<leftPen lineWidth="0.0" lineColor="#808080"/>
+					<bottomPen lineWidth="0.0" lineColor="#808080"/>
+					<rightPen lineWidth="0.0" lineColor="#808080"/>
+				</box>
+			</frame>
+		</band>
+	</columnFooter>
 	<summary>
 		<band height="245">
 			<frame>
 				<reportElement x="11" y="108" width="304" height="58" uuid="de3ece39-d584-49da-92fb-3947921e7ee7">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
@@ -599,7 +571,7 @@
 				</box>
 			</frame>
 			<frame>
-				<reportElement x="315" y="108" width="305" height="58" uuid="46c241c8-d2ad-4b03-91e1-1bd665f989be">
+				<reportElement x="315" y="108" width="302" height="58" uuid="46c241c8-d2ad-4b03-91e1-1bd665f989be">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<box>
@@ -611,7 +583,7 @@
 				</box>
 			</frame>
 			<staticText>
-				<reportElement x="20" y="184" width="600" height="15" uuid="61a2bf7b-7a63-4cbc-9b58-2f4a7fa94e3a">
+				<reportElement x="20" y="184" width="597" height="13" uuid="61a2bf7b-7a63-4cbc-9b58-2f4a7fa94e3a">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
@@ -620,7 +592,7 @@
 				<text><![CDATA[- Apabila terdapat perbedaan dengan catatan Saudara, harap menghubungi kami selambat-lambatnya 14 hari sejak diterimanya rekening koran ini.]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="11" y="92" width="609" height="16" uuid="37284946-c062-40a2-8f3b-338466ff4845"/>
+				<reportElement x="11" y="92" width="606" height="16" uuid="37284946-c062-40a2-8f3b-338466ff4845"/>
 				<box topPadding="4" rightPadding="2">
 					<pen lineColor="#D3D3D3"/>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -634,7 +606,7 @@
 				<text><![CDATA[Biaya materai telah di bayar lunas]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="11" y="72" width="609" height="20" isPrintWhenDetailOverflows="true" uuid="190de4f0-c606-4492-9667-b3d1a192fdc5">
+				<reportElement x="11" y="72" width="606" height="20" isPrintWhenDetailOverflows="true" uuid="190de4f0-c606-4492-9667-b3d1a192fdc5">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88448a52-92eb-4062-a591-b6e0af20971f"/>
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
@@ -651,7 +623,7 @@
 				<textFieldExpression><![CDATA[$P{lastBalanceStr}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="11" y="51" width="609" height="21" uuid="978471d7-675f-42ba-a69c-1941a90795cd"/>
+				<reportElement x="11" y="51" width="606" height="21" uuid="978471d7-675f-42ba-a69c-1941a90795cd"/>
 				<box leftPadding="2">
 					<pen lineWidth="0.25" lineColor="#D3D3D3"/>
 					<topPen lineWidth="0.25"/>
@@ -665,7 +637,7 @@
 				<text><![CDATA[Terbilang]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" pattern="#,##0.00">
-				<reportElement stretchType="RelativeToTallestObject" x="468" y="31" width="152" height="20" isPrintWhenDetailOverflows="true" uuid="ed8e8063-5dde-41f2-908e-c703a92f9c07">
+				<reportElement stretchType="RelativeToTallestObject" x="468" y="31" width="149" height="20" isPrintWhenDetailOverflows="true" uuid="ed8e8063-5dde-41f2-908e-c703a92f9c07">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="88448a52-92eb-4062-a591-b6e0af20971f"/>
 				</reportElement>
 				<box rightPadding="10">
@@ -780,7 +752,7 @@
 				<text><![CDATA[TOTAL MUTASI KREDIT]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="468" y="11" width="152" height="20" forecolor="#000000" backcolor="#ADD8E6" uuid="5ddcb16b-2982-44ee-8563-496a62f1c31b">
+				<reportElement mode="Opaque" x="468" y="11" width="149" height="20" forecolor="#000000" backcolor="#ADD8E6" uuid="5ddcb16b-2982-44ee-8563-496a62f1c31b">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0f7074bb-e6ea-4350-9425-56f9e3a6f312"/>
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 				</reportElement>
@@ -797,7 +769,7 @@
 				<text><![CDATA[SALDO AKHIR]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="20" y="200" width="600" height="15" uuid="81f7fd47-1f39-4a50-9315-1886900b1e99">
+				<reportElement x="20" y="197" width="597" height="13" uuid="c0492712-056a-489a-9d68-0e6d2c5e2ff5">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
@@ -806,7 +778,7 @@
 				<text><![CDATA[- Salinan rekening koran ini merupakan hasil cetakan komputer, tidak diperlukan tanda tangan pejabat Bank]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="20" y="214" width="600" height="15" uuid="336537e8-528a-413a-8f3f-ae574f3d5f25">
+				<reportElement x="20" y="210" width="597" height="13" uuid="8116a99b-f5eb-4732-bea7-3bb4c82255d5">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement verticalAlignment="Middle">

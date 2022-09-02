@@ -5,19 +5,24 @@ import com.angripa.report.domain.XlsData;
 import com.angripa.report.util.CurrenyUtil;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import net.sf.jasperreports.engine.export.JRPdfExporter;
+import net.sf.jasperreports.export.SimpleExporterInput;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
@@ -41,18 +46,19 @@ public class FileUploadController {
       return "uploader";
    }
 
+   @Value("${report.path.logo}")
+   String pathLogo;
+
    @PostMapping("/upload")
    public ResponseEntity<?> handleFileUpload(@RequestParam("file") final MultipartFile file, HttpServletResponse response) {
       String[] split = file.getOriginalFilename().split("\\.");
       String ext =  split[split.length-1] ;
       String fileName = file.getOriginalFilename().replace(ext,"pdf");
-      System.out.println(ext);
       if(!"xls".equals(ext) && !"xlsx".equals(ext)){
          return ResponseEntity.ok("Invalid Extension");
       }
       try {
          Resource resource = context.getResource("classpath:reports/sample.jrxml");
-         Resource resourceLogo = context.getResource("classpath:reports/logo.jpeg");
 
          //Compile to jasperReport
          InputStream inputStream = resource.getInputStream();
@@ -62,16 +68,18 @@ public class FileUploadController {
 
          List<XlsData> dataList = new ArrayList<>();
          readData(file.getInputStream(), dataList, params);
+         System.out.println("total data" + dataList.size());
          //XlsData source Set
          JRDataSource dataSource = new JRBeanCollectionDataSource(dataList);
          params.put("datasource", dataSource);
-         params.put("logo", resourceLogo.getURI().getPath());
+         params.put("logo", pathLogo);
 
          //Make jasperPrint
          JasperPrint jasperPrint = JasperFillManager.fillReport(report, params, dataSource);
          //Media Type
          response.setContentType(MediaType.APPLICATION_PDF_VALUE);
-
+         jasperPrint.setPageHeight(842);
+         jasperPrint.setPageWidth(680);
          response.addHeader("Content-Disposition", "attachment; filename=" + fileName);
          //Export PDF Stream
          JasperExportManager.exportReportToPdfStream(jasperPrint, response.getOutputStream());
@@ -88,14 +96,14 @@ public class FileUploadController {
          Workbook workbook = new XSSFWorkbook(is);
          Sheet sheet = workbook.getSheet(SHEET);
          Iterator<Row> rows = sheet.iterator();
-         int rowNumber = 0;
+         int rowNumber = 1;
          while (rows.hasNext()) {
             Row currentRow = rows.next();
             Iterator<Cell> cellsInRow = currentRow.iterator();
             int cellIdx = 0;
             // skip header
             if (rowNumber < 8) {
-               rowNumber++;
+
                if (rowNumber == 3) {
                   while (cellsInRow.hasNext()) {
                      Cell currentCell = cellsInRow.next();
@@ -158,6 +166,7 @@ public class FileUploadController {
                      cellIdx++;
                   }
                }
+               rowNumber++;
                continue;
             }
 

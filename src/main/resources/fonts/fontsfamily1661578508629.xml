@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fontFamilies>
+	<fontFamily name="Tahoma">
+		<normal>
+			<ttf><![CDATA[fonts/Tahoma/Tahoma.ttf]]></ttf>
+			<pdf><![CDATA[fonts/Tahoma/Tahoma.ttf]]></pdf>
+		</normal>
+		<bold>
+			<ttf><![CDATA[fonts/Tahoma/TAHOMAB0.TTF]]></ttf>
+			<pdf><![CDATA[fonts/Tahoma/TAHOMAB0.TTF]]></pdf>
+		</bold>
+		<pdfEncoding><![CDATA[Cp1252]]></pdfEncoding>
+		<pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+		<exportFonts/>
+	</fontFamily>
+</fontFamilies>

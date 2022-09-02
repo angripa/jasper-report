@@ -71,12 +71,17 @@
         <!--			<artifactId>spring-boot-starter-test</artifactId>-->
         <!--			<scope>test</scope>-->
         <!--		</dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>local.jasperFontOverrides</groupId>-->
+<!--            <artifactId>local.jasperFontOverrides</artifactId>-->
+<!--            <version>1.0</version>-->
+<!--            <scope>system</scope>-->
+<!--            <systemPath>${basedir}/src/main/resources/reports/jasperfonts.jar</systemPath>-->
+<!--        </dependency>-->
         <dependency>
-            <groupId>local.jasperFontOverrides</groupId>
-            <artifactId>local.jasperFontOverrides</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${basedir}/src/main/resources/reports/jasperfonts.jar</systemPath>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports-fonts</artifactId>
+            <version>6.0.0</version>
         </dependency>
     </dependencies>
     <repositories>
@@ -88,13 +93,18 @@
     </repositories>
     <build>
         <finalName>app</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-    </build>
 
+    </build>
 
 </project>
