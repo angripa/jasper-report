@@ -68,7 +68,6 @@ public class FileUploadController {
 
          List<XlsData> dataList = new ArrayList<>();
          readData(file.getInputStream(), dataList, params);
-         System.out.println("total data" + dataList.size());
          //XlsData source Set
          JRDataSource dataSource = new JRBeanCollectionDataSource(dataList);
          params.put("datasource", dataSource);

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Report" pageWidth="680" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="627" leftMargin="20" rightMargin="33" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="81009a31-11e5-494b-9ef1-14c9122bcc33">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Report" pageWidth="680" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="627" leftMargin="20" rightMargin="33" topMargin="20" bottomMargin="20" isSummaryWithPageHeaderAndFooter="true" isFloatColumnFooter="true" uuid="81009a31-11e5-494b-9ef1-14c9122bcc33">
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
@@ -31,7 +31,7 @@
 		<band splitType="Stretch"/>
 	</background>
 	<pageHeader>
-		<band height="297">
+		<band height="298">
 			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField evaluationTime="Master">
 				<reportElement x="429" y="29" width="191" height="17" uuid="f4d4679e-a501-424c-b941-44993938053c"/>
@@ -55,7 +55,7 @@
 				<textFieldExpression><![CDATA["LAPORAN TRANSAKSI FINANSIAL"]]></textFieldExpression>
 			</textField>
 			<frame>
-				<reportElement style="reportStyle" x="10" y="66" width="616" height="224" isRemoveLineWhenBlank="true" uuid="9c6c79ba-29bf-4af1-bdd1-c4baef72aebd">
+				<reportElement style="reportStyle" x="10" y="66" width="616" height="232" isRemoveLineWhenBlank="true" uuid="9c6c79ba-29bf-4af1-bdd1-c4baef72aebd">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<printWhenExpression><![CDATA[$V{PAGE_NUMBER}==1]]></printWhenExpression>
 				</reportElement>
@@ -167,7 +167,7 @@
 				<staticText>
 					<reportElement x="378" y="171" width="10" height="15" isRemoveLineWhenBlank="true" uuid="007e5c29-318d-40bb-99aa-3a7835864f8f"/>
 					<textElement textAlignment="Center">
-						<font size="8" isBold="true"/>
+						<font size="9"/>
 					</textElement>
 					<text><![CDATA[:]]></text>
 				</staticText>
@@ -196,7 +196,7 @@
 				<staticText>
 					<reportElement x="378" y="153" width="10" height="15" isRemoveLineWhenBlank="true" uuid="eab16224-8577-43ef-8824-f93b025351f4"/>
 					<textElement textAlignment="Center">
-						<font size="8" isBold="true"/>
+						<font size="9"/>
 					</textElement>
 					<text><![CDATA[:]]></text>
 				</staticText>
@@ -257,14 +257,16 @@
 					<text><![CDATA[:]]></text>
 				</staticText>
 				<frame>
-					<reportElement x="2" y="0" width="612" height="2" uuid="92af68fc-84a3-4063-8bef-e38831137074">
+					<reportElement x="1" y="0" width="612" height="2" uuid="92af68fc-84a3-4063-8bef-e38831137074">
 						<property name="com.jaspersoft.studio.unit.height" value="px"/>
 						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					</reportElement>
 					<box>
 						<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+						<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#D3D3D3"/>
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 				</frame>
@@ -455,10 +457,10 @@
 				<box topPadding="6" leftPadding="4" bottomPadding="5" rightPadding="4">
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
-					<bottomPen lineWidth="0.75" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<bottomPen lineWidth="0.9" lineStyle="Solid" lineColor="#D3D3D3"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
+				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font size="7.5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{date}]]></textFieldExpression>
@@ -488,7 +490,7 @@
 					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement textAlignment="Right" verticalAlignment="Middle">
+				<textElement textAlignment="Right" verticalAlignment="Top">
 					<font size="7.5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{teller}]]></textFieldExpression>
@@ -503,7 +505,7 @@
 					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement textAlignment="Right" verticalAlignment="Middle">
+				<textElement textAlignment="Right" verticalAlignment="Top">
 					<font size="7.5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{debit}]]></textFieldExpression>
@@ -518,13 +520,13 @@
 					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement textAlignment="Right" verticalAlignment="Middle">
+				<textElement textAlignment="Right" verticalAlignment="Top">
 					<font size="7.5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{credit}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="#,##0.00">
-				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="519" y="0" width="97" height="19" isPrintWhenDetailOverflows="true" uuid="bd98a06a-2f2f-4063-9f4c-8aee5f211600">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="519" y="0" width="98" height="19" isPrintWhenDetailOverflows="true" uuid="bd98a06a-2f2f-4063-9f4c-8aee5f211600">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="14ba9b8c-bfe1-4821-823d-0b1362a9cecf"/>
 				</reportElement>
 				<box topPadding="6" leftPadding="4" bottomPadding="5" rightPadding="4">
@@ -533,7 +535,7 @@
 					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
-				<textElement textAlignment="Right" verticalAlignment="Middle">
+				<textElement textAlignment="Right" verticalAlignment="Top">
 					<font size="7.5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{balance}]]></textFieldExpression>
@@ -543,7 +545,7 @@
 	<columnFooter>
 		<band height="1">
 			<frame>
-				<reportElement x="11" y="0" width="605" height="1" uuid="de3ece39-d584-49da-92fb-3947921e7ee7">
+				<reportElement x="12" y="0" width="605" height="1" uuid="de3ece39-d584-49da-92fb-3947921e7ee7">
 					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -593,7 +595,7 @@
 			</staticText>
 			<staticText>
 				<reportElement x="11" y="92" width="606" height="16" uuid="37284946-c062-40a2-8f3b-338466ff4845"/>
-				<box topPadding="4" rightPadding="2">
+				<box topPadding="2" rightPadding="2">
 					<pen lineColor="#D3D3D3"/>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -611,8 +613,8 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<box leftPadding="2">
-					<pen lineWidth="0.25" lineColor="#D3D3D3"/>
-					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<pen lineWidth="0.5" lineColor="#D3D3D3"/>
+					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#808080"/>
 					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
 					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#808080"/>
 					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
@@ -626,9 +628,9 @@
 				<reportElement x="11" y="51" width="606" height="21" uuid="978471d7-675f-42ba-a69c-1941a90795cd"/>
 				<box leftPadding="2">
 					<pen lineWidth="0.25" lineColor="#D3D3D3"/>
-					<topPen lineWidth="0.25"/>
+					<topPen lineWidth="0.5"/>
 					<leftPen lineWidth="0.25"/>
-					<bottomPen lineWidth="0.25"/>
+					<bottomPen lineWidth="0.5"/>
 					<rightPen lineWidth="0.25"/>
 				</box>
 				<textElement verticalAlignment="Middle">
@@ -642,9 +644,9 @@
 				</reportElement>
 				<box rightPadding="10">
 					<pen lineWidth="0.25" lineColor="#D3D3D3"/>
-					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
 					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
@@ -658,10 +660,10 @@
 				</reportElement>
 				<box rightPadding="10">
 					<pen lineColor="#D3D3D3"/>
-					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font size="8"/>
@@ -674,10 +676,10 @@
 				</reportElement>
 				<box rightPadding="10">
 					<pen lineColor="#D3D3D3"/>
-					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font size="8"/>
@@ -690,10 +692,10 @@
 				</reportElement>
 				<box rightPadding="10">
 					<pen lineWidth="0.5" lineColor="#D3D3D3"/>
-					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
 					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<font size="8"/>
@@ -707,10 +709,10 @@
 				</reportElement>
 				<box topPadding="2">
 					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
 					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
 				</box>
 				<textElement textAlignment="Center">
 					<font size="8"/>
@@ -724,10 +726,10 @@
 				</reportElement>
 				<box topPadding="2">
 					<pen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
 				</box>
 				<textElement textAlignment="Center">
 					<font size="8"/>
@@ -741,10 +743,10 @@
 				</reportElement>
 				<box topPadding="2">
 					<pen lineWidth="0.25" lineColor="#D3D3D3"/>
-					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
 				</box>
 				<textElement textAlignment="Center">
 					<font size="8"/>
@@ -758,9 +760,9 @@
 				</reportElement>
 				<box topPadding="2">
 					<pen lineWidth="0.25" lineColor="#D3D3D3"/>
-					<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
-					<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#D3D3D3"/>
 					<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#D3D3D3"/>
 				</box>
 				<textElement textAlignment="Center">
